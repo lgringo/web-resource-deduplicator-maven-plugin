@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>eu.gyfz</groupId>
+    <artifactId>guinea-pig-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Guinea Pig</name>
+
+    <url>https://gyfz.eu/guinea-pig/</url>
+
+    <modules>
+        <module>core</module>
+        <module>extension</module>
+    </modules>
+
+    <properties>
+        <!-- compiler -->
+        <maven.compiler.release>11</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- plugins -->
+        <plugin.maven-clean-plugin.version>3.4.0</plugin.maven-clean-plugin.version>
+        <plugin.maven-compiler-plugin.version>3.13.0</plugin.maven-compiler-plugin.version>
+        <plugin.maven-jar-plugin.version>3.4.2</plugin.maven-jar-plugin.version>
+        <plugin.maven-resources-plugin.version>3.3.1</plugin.maven-resources-plugin.version>
+        <plugin.maven-site-plugin.version>3.21.0</plugin.maven-site-plugin.version>
+        <plugin.maven-project-info-reports-plugin.version>3.8.0</plugin.maven-project-info-reports-plugin.version>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${plugin.maven-clean-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${plugin.maven-compiler-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${plugin.maven-jar-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${plugin.maven-resources-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>${plugin.maven-site-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>${plugin.maven-project-info-reports-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>eu.gyfz</groupId>
+                <artifactId>web-resource-deduplicator-maven-plugin</artifactId>
+                <version>@project.version@</version>
+                <configuration>
+                    <resourcesExtensions>
+                        <resourcesExtension>.css</resourcesExtension>
+                        <resourcesExtension>.ttf</resourcesExtension>
+                    </resourcesExtensions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <site>
+            <id>gp</id>
+            <url>https://gyfz.eu/guinea-pig/</url>
+        </site>
+    </distributionManagement>
+
+</project>

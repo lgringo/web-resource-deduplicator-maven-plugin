@@ -1,0 +1,80 @@
+<site xmlns="http://maven.apache.org/SITE/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd">
+
+    <bannerLeft>
+        <image src="./images/gyfz-banner-75.jpg"/>
+    </bannerLeft>
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>${version.maven-fluido-skin}</version>
+    </skin>
+
+    <edit>${project.scm.url}</edit>
+
+    <custom>
+        <fluidoSkin>
+            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+            <gitHub>
+                <projectId>lgringo/web-resource-deduplicator-maven-plugin</projectId>
+                <ribbonOrientation>right</ribbonOrientation>
+                <ribbonColor>black</ribbonColor>
+            </gitHub>
+        </fluidoSkin>
+    </custom>
+
+    <publishDate position="right"/>
+    <version position="right"/>
+
+    <body>
+
+        <breadcrumbs>
+            <item name="Maven" href="https://maven.apache.org/index.html"/>
+        </breadcrumbs>
+
+        <menu name="Overview">
+            <item name="Introduction" href="index.html"/>
+            <item name="Goals" href="plugin-info.html"/>
+        </menu>
+
+        <menu name="Usage">
+            <item name="Maven Coordinates" href="dependency-info.html"/>
+            <item name="Usage" href="usage.html"/>
+        </menu>
+
+        <menu name="Project Construction">
+            <item name="Build from sources" href="build-how-to.html"/>
+            <item name="Property Updates Report" href="property-updates-report.html"/>
+
+            <item name="Dependencies" collapse="true" href="dependencies-section.html">
+                <item name="Dependencies" href="dependencies.html"/>
+                <item name="Dependency Management" href="dependency-management.html"/>
+                <item name="Dependency Updates Report" href="dependency-updates-report.html"/>
+                <item name="Dependency Analysis" href="dependency-analysis.html"/>
+            </item>
+
+            <item name="Plugins" collapse="true" href="plugins-section.html">
+                <item name="Plugins" href="plugins.html"/>
+                <item name="Plugin Management" href="plugin-management.html"/>
+                <item name="Plugin Updates Report" href="plugin-updates-report.html"/>
+            </item>
+        </menu>
+
+        <menu name="Legal stuff">
+            <item name="Licenses" href="licenses.html"/>
+            <item name="Summary" href="summary.html"/>
+        </menu>
+
+        <menu name="Project Management">
+            <item name="Source Code Management" href="scm.html"/>
+            <item name="Issue Management" href="issue-management.html"/>
+            <item name="Team" href="team.html"/>
+            <item name="Distribution Management" href="distribution-management.html"/>
+        </menu>
+
+        <!--
+                <menu ref="reports"/>
+        -->
+    </body>
+</site>

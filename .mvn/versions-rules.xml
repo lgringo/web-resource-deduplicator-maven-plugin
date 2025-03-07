@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset comparisonMethod="maven"
+         xmlns="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 https://www.mojohaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
+    <ignoreVersions>
+        <ignoreVersion type="regex">(?i).*[-_\.]M[0-9\.]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*[-_\.]CR[0-9\.]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*[-_\.]rc[0-9\.]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*[-_\.]beta[0-9\.-]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*[-_\.]b[0-9\.-]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*[-_\.]alpha[0-9\.-]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*[-_\.]nightly[0-9\.]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*[-_\.]jboss[0-9\.]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*-atlassian-[0-9\.]*</ignoreVersion>
+        <ignoreVersion type="regex">(?i).*-jenkins-[0-9\.]*</ignoreVersion>
+        <ignoreVersion type="regex">.*[-\.]redhat-[0-9]+</ignoreVersion>
+    </ignoreVersions>
+
+    <!-- Examples :
+        https://github.com/mojohaus/versions/issues/157
+    -->
+</ruleset>

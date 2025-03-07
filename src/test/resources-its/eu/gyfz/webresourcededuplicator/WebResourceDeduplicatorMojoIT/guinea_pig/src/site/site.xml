@@ -1,0 +1,46 @@
+<site xmlns="http://maven.apache.org/SITE/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd">
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>2.0.1</version>
+    </skin>
+
+    <custom>
+        <fluidoSkin>
+            <topBarEnabled>true</topBarEnabled>
+            <sideBarEnabled>false</sideBarEnabled>
+
+            <topBarIcon>
+                <name>guinea-pig</name>
+                <alt>guinea-pig logo</alt>
+                <src>./images/guinea-pig-logo-min.png</src>
+                <href>./index.html</href>
+            </topBarIcon>
+
+            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+
+            <gitHub>
+                <projectId>lgringo/site-remove-duplicate-resources-maven-plugin</projectId>
+                <ribbonOrientation>right</ribbonOrientation>
+                <ribbonColor>black</ribbonColor>
+            </gitHub>
+
+        </fluidoSkin>
+    </custom>
+
+    <publishDate position="right"/>
+    <version position="right"/>
+
+    <poweredBy>
+        <logo name="Maven" href="https://maven.apache.org/">
+            <image src="https://maven.apache.org/images/logos/maven-feather.png"/>
+        </logo>
+    </poweredBy>
+
+    <body>
+        <menu ref="reports"/>
+        <menu ref="modules"/>
+    </body>
+</site>

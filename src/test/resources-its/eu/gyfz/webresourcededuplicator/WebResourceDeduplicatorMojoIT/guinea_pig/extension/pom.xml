@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>eu.gyfz</groupId>
+        <artifactId>guinea-pig-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>guinea-pig-extension</artifactId>
+
+    <properties>
+        <module-short-name>extension</module-short-name>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>eu.gyfz</groupId>
+            <artifactId>guinea-pig-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <site>
+            <id>gyfz</id>
+            <url>https://gyfz.eu/guinea-pig/${module-short-name}/</url>
+        </site>
+    </distributionManagement>
+
+</project>
